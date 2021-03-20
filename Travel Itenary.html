@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Travel Itenary for Darjelling </title>
+    <style>
+       print{
+           width:400px;
+       }
+        .back {
+            background: #614385; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #516395, #614385); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            text-align:center;
+        }
+
+        @media only screen and (max-width:600px) {
+            .text{
+                padding:14px 6px;
+                text-align:center;
+            }
+            p{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size:larger;
+            }
+            .hb {
+                border-radius: 12px;
+                padding:14px 40px;
+            }
+            
+            .bx {
+               
+            padding: 14px 40px;
+            color:red;
+            
+        }
+            .tcss {
+                font-size:20px;
+                color:blueviolet;
+                padding:12px 20px;
+
+            }
+            
+            table, td, tr {
+                border-collapse: separate;
+                border-spacing: 0 15px;
+                padding: 5px;
+                text-align:center;
+            }
+            img{
+                margin:auto;
+                border:dotted;
+            }
+            .btm {
+                padding: 14px 40px;
+                background-color: white;
+                color: black;
+                border: 8px solid;
+                border-color:red;
+            }
+            .butt{
+                text-align:left;
+
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .mhd {
+                display: inline-block;
+                padding: 12px 28px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: #4CAF50;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+            .display{
+                height:250px;
+               width:330px;
+               
+            }
+            .dc{
+               font-size:larger;
+               padding:5px 5px;
+               border-color:black;
+               border:solid;
+            }
+            .book {
+               
+                border-radius: 10px;
+                font-family: Arial;
+                color: #ffffff;
+                font-size: 15px;
+                background-color:gold;
+                padding: 11px 23px 10px 20px;
+                text-decoration: none;
+            }
+
+            .hee {
+                text-align: center;
+            }
+
+            .neews {
+               
+                color: black;
+                border:groove;
+                padding:10px 10px;
+                background-color:skyblue;
+                font-style:italic;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .button {
+                margin-top: 100px;
+                text-align: center;
+            }
+
+            .radio {
+                align-self: center;
+            }
+            .heade{
+                font-family :'Times New Roman', Times, serif;
+               border-top:double;
+                border-bottom:double;
+                padding-top:20px;
+                padding-bottom:30px;
+            }
+            .sec{
+                text-align:center;
+            }
+        }
+    </style>
+    <script>
+      
+        var s1;
+        function dt() {
+            var dtr = document.getElementById("deptd").value;
+            document.getElementById("dd").innerHTML = dtr;
+            document.getElementById("deptdate").style.display = "block";
+        }
+        function at() {
+            var atr = document.getElementById("arrd").value;
+            document.getElementById("ad").innerHTML = atr;
+            document.getElementById("arrivaldate").style.display = "block";
+        }
+        function book() {
+            window.open("https://www.irctc.co.in/nget/train-search", "_blank");
+        }
+        function hide() {
+            document.getElementById("img").style.display = "none";
+            document.getElementById("cl").style.display = "none";
+            var value = document.getElementById("tra").value;
+            document.getElementById("sub").style.display = "none";
+            if (value === '12s' || value === '22s' || value === '42s' || value === '62s' || value === '92s' || value === '92s') {
+                var s1 = 210;
+                
+            }
+            else if (value === '3sl') {
+                var s1 = 455;
+
+            }
+            else if (value === '3a3') {
+                var s1 = 1205;
+
+            }
+            else if (value === '3a2') {
+                var s1 = 1695;
+
+            }
+            else if (value === '3a1') {
+                var s1 = 2625;
+
+            }
+            else if (value === '5a1') {
+                var s1 = 2130;
+
+            }
+            else if (value === '6sl' || value === '9sl') {
+                var s1 = 425;
+
+            }
+            else if (value === '6a3' || value === '9a3') {
+                var s1 = 1160;
+
+            }
+            else if (value === '6a2' || value === '9a2') {
+                var s1 = 1645;
+
+            }
+            else if (value === '82s') {
+                var s1 = 215;
+
+            }
+            else if (value === '8sl') {
+                var s1 = 430;
+            }
+            else if (value === '8a3') {
+                var s1 = 1170;
+            }
+            else if (value === '8a2') {
+                var s1 = 1665;
+            }
+            else if (value === '102s') {
+                var s1 = 195;
+            }
+            else if (value === '10sl') {
+                var s1 = 330;
+            }
+            else if (value === '10a3') {
+                var s1 = 895;
+            }
+            else if (value === '10a2') {
+                var s1 = 1280;
+            }
+            else {
+                alert("Please Select a train");
+              
+            }
+            document.getElementById("lt").innerHTML = s1;
+            document.getElementById("pt").style.display = "block";
+
+          
+        }
+        function morehotel() {
+            document.getElementById("mh");
+            window.open("https://www.google.com/search?q=darjelling+hotels", "_blank");
+        }
+
+        function tiers() {
+            document.getElementById("sub").style.display = "block";
+            var value = document.getElementById("tra").value;
+        }
+
+        function train() {
+            document.getElementById("cl").style.display = "block";
+            var xx = document.getElementById("cl");
+            xx = document.getElementById("ig").innerHTML;
+            document.getElementById("img").style.display = "block";
+
+
+        }
+       
+    
+
+    </script>
+
+</head>
+<body class="back">
+    <div id="pt" style="display:none">
+        <p id="tickettrain">Ticket Price of TRAIN : &#x20A8;</p> <output id="lt" for="tickettrain"></output>
+    </div>
+    <div id="ph" style="display:none">
+        <p id="hotelticket">Room Price of HOTEL :  &#x20A8;</p> <output for="hotelticket" id="ot"></output>
+
+    </div>
+    <div id="deptdate" style="display:none">
+        <p id="departuredate">DEPARTURE DATE :</p><output for="departuredate" id="dd"></output>
+    </div>
+    <div id="arrivaldate" style="display:none">
+        <p id="arrivaldates">ARRIVAL DATE :</p><output for="arrivaldates" id="ad"></output>
+    </div>
+    <div id="tamt" style="display:none">
+        <p id="caramt">TOTAL AMOUNT :</p><output for="caramt" id="ta"></output>
+        <p> &#x20A8;  2700 ADDED FOR TAXI RENTAL </p>
+    </div>
+    <h2 text-align:center" class="heade">Duttatreyo's Travel Itenary</h2>
+    <div class="neews">
+        <a href="https://thedarjeelingchronicle.com/" style="color:red" id="news">Darjelling Chronicles</a>
+        <br /><br />
+        <a href="https://zeenews.india.com/tags/Darjeeling.html" id="news" style="color:red">Darjelling News</a>
+        <br />
+    </div>
+    <table>
+        <tr>
+            <td>
+                <p>Departure Date</p>
+                <input type="date" id="deptd" class="dc" value="2021-03-19" min="2021-03-19" max="2022-05-19" onchange="dt()" />
+                <br />
+                <p>TRANSPORT</p>
+                <input type="button" value="Click For Train" onclick="train()" id="but" class="btm" />
+                <br />
+                <br />
+                <input type="button"  class="book" value="Book Ticket" onclick="book()" id="bk" />  
+                <br />
+                <br />
+
+                <p>Arrival Date</p>
+                <input type="date" class="dc" min="2021-03-5" max="2021-06-15" value="2021-03-19" id="arrd" onchange="at()" />
+                <br />
+                <br />
+                <button type="submit" onclick="ho()" id="coi" class="hb">HOTELS </button>
+                <br />
+                <br />
+                <input type="button" onclick="morehotel()" class="mhd" value="Click for More Hotels" id="mh" />
+                <br />
+                <br />
+                <iframe src="https://www.tripadvisor.com/Hotels-g304557-Darjeeling_Darjeeling_District_West_Bengal-Hotels.html" class="display" id="iframee" style="display:none"></iframe>
+                <script>
+                    function ho() {
+                        document.getElementById("iframee").style.display = "block";
+                        document.getElementById("amt").style.display = "block";
+                        document.getElementById("fsub").style.display = "block";
+
+
+                    }
+                    function lk() {
+                        document.getElementById("iframee").style.display = "none";
+                        var hp = document.getElementById("amt").value;
+                        document.getElementById("ot").innerHTML = hp;
+                        document.getElementById("amt").style.display = "none";
+                        document.getElementById("fsub").style.display = "none";
+                        document.getElementById("ph").style.display = "block";
+                    }
+                </script>
+                <br />
+                <br />
+                <label for="iframee">
+                    <input type="number" class="text" placeholder="Enter the amount*" id="amt" style="display:none" />
+
+                </label>
+                <br />
+                <br />
+                <button type="submit" class="bx" onclick="lk()" id="fsub" style="display:none">Submit</button>
+
+                <br />
+                <div class="imgee" style="display:none" : id="cl">
+                    <select id="tra" onclick="tiers()">
+
+                        <optgroup label="KOAA HDB SPL (02261)">
+                            <option value="12s"> SECOND SITTING (2S) </option>
+
+                        </optgroup>
+                        <optgroup label="HWH GHY SPECIAL (02345)">
+
+                            <option value="22s"> SECOND SITTING (2S) </option>
+                            <option value="2sl"> SLEEPER (SL)</option>
+                            <option value="2a3"> AC 3-TIER (3A)</option>
+                            <option value="2a2"> AC 2-TIER (2A)</option>
+                            <option value="2a1"> AC FIRST CLASS (1A)</option>
+                        </optgroup>
+                        <optgroup label="SDAH NJP SPL (02343)">
+                            <option value="32s"> SECOND SITTING (2S) </option>
+                            <option value="3sl"> SLEEPER (SL)</option>
+                            <option value="3a3"> AC 3-TIER (3A)</option>
+                            <option value="3a2"> AC 2-TIER (2A)</option>
+                            <option value="3a1"> AC FIRST CLASS (1A)</option>
+                        </optgroup>
+                        <optgroup label="SDAH NOQ SPL(02377)">
+                            <option value="42s"> SECOND SITTING (2S) </option>
+                            <option value="4sl"> SLEEPER (SL)</option>
+                            <option value="4a3"> AC 3-TIER (3A)</option>
+                            <option value="4a2"> AC 2-TIER (2A)</option>
+                            <option value="4a1"> AC FIRST CLASS (1A)</option>
+                        </optgroup>
+                        <optgroup label="SDAH BXT SPL(03147)">
+                            <option value="52s"> SECOND SITTING (2S) </option>
+                            <option value="5sl"> SLEEPER (SL)</option>
+                            <option value="5a3"> AC 3-TIER (3A)</option>
+                            <option value="5a2"> AC 2-TIER (2A)</option>
+                            <option value="5a1"> AC FIRST CLASS (1A)</option>
+                        </optgroup>
+                        <optgroup label="SDAH SCL SPL(03175)">
+                            <option value="62s"> SECOND SITTING (2S) </option>
+                            <option value="6sl"> SLEEPER (SL)</option>
+                            <option value="6a3"> AC 3-TIER (3A)</option>
+                            <option value="6a2"> AC 2-TIER (2A)</option>
+
+                        </optgroup>
+                        <optgroup label="SDAH APDJ SPL(03149)">
+                            <option value="72s"> SECOND SITTING (2S) </option>
+                            <option value="7sl"> SLEEPER (SL)</option>
+                            <option value="7a3"> AC 3-TIER (3A)</option>
+                            <option value="7a2"> AC 2-TIER (2A)</option>
+                            <option value="7a1"> AC FIRST CLASS (1A)</option>
+                        </optgroup>
+                        <optgroup label="SDAH NOQ SPL (03141)">
+                            <option value="82s"> SECOND SITTING (2S) </option>
+                            <option value="8sl"> SLEEPER (SL)</option>
+                            <option value="83a"> AC 3-TIER (3A)</option>
+                            <option value="8a2"> AC 2-TIER (2A)</option>
+
+                        </optgroup>
+                        <optgroup label="SDAH AGTL SPL(03173)">
+                            <option value="92s"> SECOND SITTING (2S) </option>
+                            <option value="9sl"> SLEEPER (SL)</option>
+                            <option value="9a3"> AC 3-TIER (3A)</option>
+                            <option value="9a2"> AC 2-TIER (2A)</option>
+
+                        </optgroup>
+                        <optgroup label="KOAA SHTT SPL(03181)">
+                            <option value="102s"> SECOND SITTING (2S) </option>
+                            <option value="10sl"> SLEEPER (SL)</option>
+                            <option value="10a3"> AC 3-TIER (3A)</option>
+                            <option value="10a2"> AC 2-TIER (2A)</option>
+
+                        </optgroup>
+                    </select>
+                    <br />
+
+                    <br />
+                    <input type="submit" id="sub" value="Submit" onclick="hide()" hidden />
+                </div>
+                <p id="ig"></p>
+            </td>
+
+            <td>
+                <div id="img" class="imgee" style="display:none">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic1"><img src="https://i.ibb.co/bHtjMnr/1-2.png" alt="1-2" border="0"></label>
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>
+                                <label for="pic2"><img src="https://i.ibb.co/b2p5bLK/1.png" alt="1" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic3"><img src="https://i.ibb.co/4Pq3n72/2-2.png" alt="2-2" border="0"></label>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic4"><img src="https://i.ibb.co/563grWm/2.png" alt="2" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic5"><img src="https://i.ibb.co/MhZ8mQc/4.png" alt="4" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic6"><img src="https://i.ibb.co/DV1NzpC/5-2.png" alt="5-2" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic7"><img src="https://i.ibb.co/VBNS4tR/5.png" alt="5" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic8"><img src="https://i.ibb.co/dkMd3Sf/6.png" alt="6" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic9"><img src="https://i.ibb.co/sCrcz57/7-2.png" alt="7-2" border="0"></label>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label for="pic10"><img src="https://i.ibb.co/PNVK7pq/7.png" alt="7" border="0"></label>
+
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </td>
+        </tr>
+
+        <!--SDAH NJP SPL (02343)Runs On: MTWTFSSTrain Schedule22:05 | SEALDAH | Sat, 03 Apr10:1008:15 | NEW JALPAIGURI | Sun, 04 Apr-->
+    </table>
+    <br />
+    <br />
+    <input type="button" class="tcss" value="Total Cost" id="tot" onclick="totaal()" />
+    <br />
+    <br />
+
+    <button type="button" onclick="print()" >PRINT  TO PDF</button>
+
+    <script>
+
+        function totaal() {
+            var t;
+            var as = document.getElementById("lt").value
+            var hhp = document.getElementById("ot").value
+            var vas = parseInt(as);
+            var vhhp = parseInt(hhp);
+            var t = (vas) + (vhhp) + 2700;
+            var ts = t.toString();
+
+            document.getElementById("tamt").style.display = "block";
+            document.getElementById("ta").innerHTML = t;
+           
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>
